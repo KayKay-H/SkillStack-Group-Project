@@ -1,24 +1,37 @@
+'use client';
 import Link from 'next/link';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
-  return (
-    <nav className="bg-indigo-600 text-white px-4 py-3 flex justify-between items-center">
-      <div className="text-lg font-semibold">
-        <Link href="/">SkillStack</Link>
-      </div>
-      
-      {/* Desktop menu */}
-      <ul className="hidden md:flex gap-6">
-        <li><Link href="/"><span className="hover:text-gray-300">Home</span></Link></li>
-        <li><Link href="/dashboard"><span className="hover:text-gray-300">Dashboard</span></Link></li>
-        <li><Link href="/editor"><span className="hover:text-gray-300">Editor</span></Link></li>
-        <li><Link href="/login"><span className="hover:text-gray-300">Login</span></Link></li>
-      </ul>
+  const [isOpen, setIsOpen] = useState(false);
 
-      {/* Mobile menu placeholder */}
-      <div className="md:hidden">
-        {/*add hamburger menu here */}
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+
+  return (
+    <nav className="bg-indigo-600 text-white px-4 py-3 shadow-sm sticky top-0 z-50">
+      <div className="flex justify-between items-center max-w-6xl mx-auto">
+        {/* Logo */}
+        <div className="text-xl font-bold">
+          <Link href="/" onClick={closeMenu}>SkillStack</Link>
+        </div>
+
+        {/* Hamburger Icon */}
+        <button onClick={toggleMenu} className="focus:outline-none">
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+      {/* Dropdown Menu */}
+      {isOpen && (
+        <div className="mt-4 bg-indigo-700 px-4 py-4 rounded-lg shadow-md flex flex-col gap-4 text-sm font-medium">
+          <li><Link href="/" onClick={closeMenu} className="hover:text-gray-300">Home</Link></li>
+          <li><Link href="/dashboard" onClick={closeMenu} className="hover:text-gray-300">Dashboard</Link></li>
+          <li><Link href="/editor" onClick={closeMenu} className="hover:text-gray-300">Editor</Link></li>
+          <li><Link href="/login" onClick={closeMenu} className="hover:text-gray-300">Login</Link></li>
+        </div>
+      )}
     </nav>
   );
 }
