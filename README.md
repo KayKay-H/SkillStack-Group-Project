@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SkillStack – Build Your Dev Portfolio Without Coding
+
+## Project Overview
+
+SkillStack is a beginner-friendly portfolio builder designed for students and junior developers who want to create a professional online presence without writing code from scratch.  
+Users can log in, add projects, list skills, write a bio, and customize their portfolio with live preview and easy deployment.
+
+This project is built using Next.js (App Router) with React, Tailwind CSS for styling, and React Context for state management.
+
+---
+
+## Phase 1 Deliverables
+
+- Setup of Next.js project with App Router (`app/` directory)  
+- Created core components: `Navbar`, `Footer`, and `MainContent`  
+- Implemented routing for Home, Dashboard, Editor, and Login pages  
+- Used React state and props for component interactivity  
+- Applied basic styling with Tailwind CSS ensuring responsive design  
+- Shared layout (`layout.tsx`) with consistent navbar and footer across pages
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (version 16 or higher recommended)  
+- npm or yarn package manager
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/KayKay-H/SkillStack-Group-Project.git
