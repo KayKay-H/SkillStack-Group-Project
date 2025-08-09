@@ -1,19 +1,18 @@
 import './globals.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { ReactNode } from 'react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'SkillStack',
-  description: 'Dev Portfolio Builder',
+  description: 'Collaborative skill-building platform',
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col min-h-screen">
         <Navbar />
-        {children}
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
