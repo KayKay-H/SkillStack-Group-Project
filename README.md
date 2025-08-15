@@ -1,4 +1,4 @@
-# SkillStack – Build Your Dev Portfolio Without Coding
+# SkillStack – A beginner-friendly platform to create, manage, and showcase your developer portfolio without writing code
 
 ## Project Overview
 SkillStack is a beginner-friendly portfolio builder designed for students and junior developers who want to create a professional online presence without writing code from scratch.  
@@ -28,6 +28,28 @@ This project is built using Next.js (App Router) with React, Tailwind CSS for st
 
 ---
 
+## Phase 3 Deliverables
+- Finalized all components and functionality (Dashboard, Editor, Profile Info, Projects and Skills management)  
+- Added save functionality for profile edits  
+- Applied performance optimizations including code splitting and lazy loading for Tabs  
+- Enhanced user experience with spacing, padding, and professional styling improvements  
+- Prepared final presentation showcasing main features, technologies, and challenges  
+
+---
+
+## Summary
+SkillStack allows users to create and manage a professional developer portfolio without coding. Users can:
+
+- Log in and set their name and email.
+- Add, edit, and delete projects in the Editor page.
+- Add, edit, and delete skills in the Editor page.
+- View their projects and skills on the Dashboard (read-only).
+- Edit profile information and save changes in the Profile Info tab.
+- Navigate seamlessly using the responsive Navbar with tabbed interface.
+- Enjoy live previews of their portfolio changes.
+
+---
+
 ## Component and State Overview
 
 - **Navbar & Footer:** Site-wide navigation and footer, with responsive design and hamburger menu using React state.  
@@ -35,6 +57,7 @@ This project is built using Next.js (App Router) with React, Tailwind CSS for st
 - **Tabs (`TabGroup`, `Tab`, `TabPanel`):** Implements tabbed UI on Dashboard using React Context API to manage active tab state and enable dynamic content display.  
 - **Routing:** Next.js App Router handles pages for Home (`/`), Dashboard (`/dashboard`), Editor (`/editor`), Login (`/login`), and dynamic user profiles (`/profile/[username]`).  
 - **State Management:** React Context API and useState hooks are used for sharing active tab and mobile menu open states across components.
+- **ProjectsContext & SkillsContext:** Provide global state for projects and skills allowing add/edit/delete functionality.
 
 ---
 
