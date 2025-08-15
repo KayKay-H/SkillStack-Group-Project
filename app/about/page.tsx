@@ -1,12 +1,14 @@
 'use client';
 
-import TabGroup from '@/components/Tabs/TabGroup';
-import Tab from '@/components/Tabs/Tab';
-import TabPanel from '@/components/Tabs/TabPanel';
+import dynamic from 'next/dynamic';
+
+const TabGroup = dynamic(() => import('@/components/Tabs/TabGroup').then(mod => mod.default));
+const Tab = dynamic(() => import('@/components/Tabs/TabGroup').then(mod => mod.Tab));
+const TabPanel = dynamic(() => import('@/components/Tabs/TabGroup').then(mod => mod.TabPanel));
 
 export default function About() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-screen pb-10">
       <div className="flex-grow container mx-auto p-6">
         <h1 className="text-3xl font-bold mb-6">About SkillStack</h1>
 

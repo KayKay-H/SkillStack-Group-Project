@@ -1,5 +1,3 @@
-// Mauwanu's contribution: Styled navigation bar with links and responsiveness
-
 "use client";
 
 import Link from 'next/link';
@@ -20,6 +18,14 @@ export default function Navbar() {
           <Link href="/" onClick={closeMenu}>SkillStack</Link>
         </div>
 
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-6">
+          <li><Link href="/" className="hover:text-gray-300">Home</Link></li>
+          <li><Link href="/dashboard" className="hover:text-gray-300">Dashboard</Link></li>
+          <li><Link href="/editor" className="hover:text-gray-300">Editor</Link></li>
+          <li><Link href="/login" className="hover:text-gray-300">Login</Link></li>
+        </ul>
+
         {/* Hamburger Icon */}
         <button onClick={toggleMenu} className="md:hidden focus:outline-none" aria-label="Toggle menu">
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -32,9 +38,4 @@ export default function Navbar() {
           <li><Link href="/" onClick={closeMenu} className="hover:text-gray-300">Home</Link></li>
           <li><Link href="/dashboard" onClick={closeMenu} className="hover:text-gray-300">Dashboard</Link></li>
           <li><Link href="/editor" onClick={closeMenu} className="hover:text-gray-300">Editor</Link></li>
-          <li><Link href="/login" onClick={closeMenu} className="hover:text-gray-300">Login</Link></li>
-        </ul>
-      )}
-    </nav>
-  );
-}
+          <li><Link href="/login" onClick={closeMenu} className="hover:tex

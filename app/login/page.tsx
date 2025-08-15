@@ -5,7 +5,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState('');
 
   return (
-    <main className="max-w-md mx-auto py-20 px-6">
+    <main className="max-w-md mx-auto py-20 px-6 pb-10">
       <h1 className="text-3xl font-bold text-indigo-700 mb-8 text-center">Login to SkillStack</h1>
 
       <label className="block text-gray-700 font-medium mb-2">Email Address</label>

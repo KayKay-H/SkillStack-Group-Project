@@ -3,11 +3,11 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Home() {
-  const [message] = useState('Welcome to SkillStack!');
+  const [message, setMessage] = useState('Welcome to SkillStack!');
 
   return (
     <main className="flex flex-col items-center justify-center text-center py-20 px-4 bg-gradient-to-b from-white via-sky-50 to-blue-100 min-h-[80vh]">
